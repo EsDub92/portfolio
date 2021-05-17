@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>samyo's portfolio.</title>
+        <!-- enter stylesheets, Google fonts, and scripts here -->
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Bungee+Shade&family=Inconsolata&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav>
+            <h1 id="logo">Samuel White</h1>
+            <ul class="nav-items">
+                <p>💻</p>
+                <li class="nav-links"><a href="#projects">projects</a></li>
+                <p>🧰</p>
+                <li class="nav-links"><a href="#skills">skills</a></li>
+                <p>🖐</p>
+                <li class="nav-links"><a href="contact.html">contact</a></li>
+            </ul>
+            <br>
+            <p></p>
+        </nav>
+
+        <main>
+            <section id="about-me">
+                <div class="about-me-container">
+                  <div class="about-me-text-container">
+                      <h2>About Me</h2>
+                      <p>
+                        Hi! I'm Sam White, a self-taught iOS developer that looks
+                        to contribute the ecosystem of Apple apps in this
+                        Swift Developer role at ABC Engineering.
+                      </p>
+                      <br>
+                      <p>
+                        I have been programming for about 2 years and it has changed my life.
+                        I am certified in the following fields:
+                        <ul>
+                          <li>Swift/iOS</li>
+                          <li>Front End Engineering</li>
+                          <li>Node.js</li>
+                          <li>Git/Command Line</li>
+                        </ul>
+                      </p>
+                      <br>
+                      <p>
+                        Above all...I <em>really</em> love to work.
+                    I have worked for a start-up conglomerate for 5 years and have enjoyed the opportunities and challenges that my prior workplace presented.
+                    During my tenure at Revival Parts LLC, I have contributed to the following departments:
+                    <ul>
+                      <li>Customer Service/Technical</li>
+                      <li>Shipping & Receiving</li>
+                      <li>Content Writing</li>
+                      <li>Tech Articles</li>
+                    </ul>
+                      </p>
+                      <br>
+                      <p>
+                        Approximate time spent programming: 
+                        <span id="time-container">0</span> seconds!
+                      </p>
+                  </div>
+                  <img src="images/iphone.jpeg" alt="iphone" class="portrait"/>
+                </div>
+                <br><br><br>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <details class="project">
+                  <h3>Currents Water Company</h3>
+                  <h3>Sleep-Aid App (iOS)</h3>
+                  <h3>Blog/Techinical Writing Portfolio</h3>
+                  <h3>Acoustic Album (sold for crypto)</h3>
+                  <h3>Da Shack (Everything Slowed-Cooked)</h3>
+                </details>
+                <br><br><br>
+              </section>
+        
+              <section id="skills">
+                <h2>Skills</h2>
+                <div id="skills-container">
+                  <!-- Add icons here -->
+                  <img src="icons/swift.png">
+                  <img src="icons/html-5.png">
+                  <img src="icons/css-3.png">
+                  <img src="icons/javascript.png">
+                  <img src="icons/node.png">
+                  <img src="icons/command-line.png">
+                  <img src="icons/github.png">
+                  <img src="icons/visual-basic.png">
+                </div>
+                <br>
+                <div class="icon-cred">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <br>
+              </section>
+        </main>
+
+        <footer>Made with <span class="heart">💖</span> in Tampa Bay, FL</footer>
+    
+    </body>
+
+    <!-- javascript -->
+    <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-1815";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+    </script>
+
+</html>
